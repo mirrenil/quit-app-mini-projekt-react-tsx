@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "./";
 
 // interface Props extends RouteComponentProps<{ name: string }> { }
 // interface Props {
@@ -11,7 +10,7 @@ function Logo() {
 
   return (
     <div>
-      <img src={logo} alt="Logotype" />
+      <img src={require('./bigLogo.png')} alt="Logotype" />
     </div>
   );
 }
