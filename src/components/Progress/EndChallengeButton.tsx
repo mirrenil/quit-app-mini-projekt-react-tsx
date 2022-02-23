@@ -1,18 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Button.css";
-function StartButton() {
+
+function EndChallengeButton() {
   return (
+
     <Link to="StartPage">
       <div>
-        <Link to="challengePage">
+        <Link to="startPage">
           <button className="btn">
-            <span>Start</span>
+            <span>End Challenge</span>
           </button>
         </Link>
       </div>
     </Link>
+
+
   );
 }
 
-export default StartButton;
+export default EndChallengeButton;
