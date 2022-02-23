@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Button.css";
+import "../StartPage/Button.css"
 
 function EndChallengeButton() {
   return (
@@ -9,7 +9,7 @@ function EndChallengeButton() {
       <div>
         <Link to="startPage">
           <button className="btn">
-            <span>End Challenge</span>
+            <span>STOP CHALLENGE</span>
           </button>
         </Link>
       </div>

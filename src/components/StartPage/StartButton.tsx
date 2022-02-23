@@ -7,7 +7,7 @@ function StartButton() {
       <div>
         <Link to="challengePage">
           <button className="btn">
-            <span>Start</span>
+            <span>START</span>
           </button>
         </Link>
       </div>

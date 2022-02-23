@@ -2,7 +2,7 @@ import React from "react";
 
 function DaysCompleted() {
   return (
-    <div>
+    <div className="days-completed">
       <span>...completed without having a smoke</span>
     </div>
   );

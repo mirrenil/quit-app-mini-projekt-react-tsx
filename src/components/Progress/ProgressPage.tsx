@@ -1,13 +1,14 @@
 import React from "react";
 import ChallengeData from "./ChallengeData";
-import Logo from "../StartPage/Logo";
 import Compliment from "./Compliment";
 import EndChallengeButton from "./EndChallengeButton";
+import MiniLogo from "./MiniLogo";
+import "./Progress.css"
 
 function ProgressPage() {
   return (
     <div className="">
-      <Logo />
+      <MiniLogo />
       <Compliment />
       <ChallengeData />
       <EndChallengeButton />
