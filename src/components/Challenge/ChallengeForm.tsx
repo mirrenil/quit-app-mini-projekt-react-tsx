@@ -13,7 +13,7 @@ function ChallengeForm(props: Props) {
 
   const [userName, setUserName()] = useState('');
   const [userAge, setUserAge()] = useState('');
-  const [cigarette, setCigarette()] = useState('');
+  const [cigarettes, setCigarettes()] = useState('');
   const [cigarettePrice, setCigarettePrice()] = useState('');
 
   const userNameInputHandler = (e) => {
@@ -36,7 +36,7 @@ function ChallengeForm(props: Props) {
     const userData = {
       name: userName,
       age: userAge,
-      ciggsPerDay: 
+      ciggsPerDay: cigarette
     }
   }
 
