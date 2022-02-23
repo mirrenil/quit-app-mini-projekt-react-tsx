@@ -1,0 +1,21 @@
+.start-btn {
+    background-color: #fafafa;
+    border: none;
+    border-radius: 100px;
+    padding: 1rem 3rem;
+    transition: .150s;
+    box-shadow: rgba(94, 43, 23, 0.096) 0px 4px 25px;
+}
+
+.start-btn span {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    background: linear-gradient(to top left, #FF7E5F, #FEB47B);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.start-btn:hover {
+    transform: scale(105%);
+    cursor: pointer;
+}
