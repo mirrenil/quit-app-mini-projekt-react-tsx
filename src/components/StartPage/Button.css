@@ -4,7 +4,7 @@
     border-radius: 100px;
     padding: 1rem 3rem;
     transition: .150s;
-    box-shadow: rgba(94, 43, 23, 0.096) 0px 4px 25px;
+    box-shadow: rgba(94, 43, 23, 0.199) 0px 4px 25px;
 }
 
 .btn span {
@@ -17,5 +17,11 @@
 
 .btn:hover {
     transform: scale(105%);
+    box-shadow: rgba(94, 43, 23, 0.103) 0px 4px 25px;
     cursor: pointer;
 }
+
+.start-btn:active {
+    transform: translate(0, .1rem);
+    box-shadow: rgba(94, 43, 23, 0.26) 0px 4px 25px;
+  }
