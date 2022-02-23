@@ -3,7 +3,8 @@ import React from "react";
 function Compliment() {
   return (
     <div className="compliment">
-      <span>You're doing great (name of user here)</span>
+      <p>You're doing great </p>
+      <h3>(name of user here)</h3>
 
     </div>
   );

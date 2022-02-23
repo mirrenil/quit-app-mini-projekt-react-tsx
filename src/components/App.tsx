@@ -14,7 +14,7 @@ function App() {
           <Route path="/" element={<StartPage />} />
           <Route path="challengePage" element={<ChallengePage />} />
           <Route path="progressPage" element={<ProgressPage />} />
-          <Route path="*" element={<div style={{ display: 'flex', justifyContent: 'center', alignContent: 'center' }}>404</div>} />
+          <Route path="*" element={<div style={{ position: "absolute", left: '50%', top: '50%', transform: 'translate(-50%)', display: 'flex', justifyContent: 'center', alignItems: 'center', fontSize: '4rem' }}>404</div>} />
         </Routes>
       </BrowserRouter>
     </div>
