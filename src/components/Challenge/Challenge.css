@@ -1,0 +1,83 @@
+.challenge-form {
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1.2rem;
+}
+.form-title {
+    font-size: 1.6rem;
+}
+.form-style {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.title{
+    font-size: 3rem;
+}
+form input {
+    height: 20px;
+    width: 20rem;
+    border-radius: 8px;
+    border: none;
+    padding: .5rem;
+    font-size: 1rem;
+}
+form input:focus {
+    outline: 3px solid #FA8022;
+    box-shadow: rgba(94, 43, 23, 0.096) 0px 4px 25px;
+}
+form label {
+    padding-left: .4em;
+    margin-bottom: .2em;
+}
+.form-inp{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    background-color: #fafafa;
+    border: none;
+    border-radius: 100px;
+    padding: 1rem 3rem;
+    transition: .150s;
+    box-shadow: rgba(94, 43, 23, 0.096) 0px 4px 25px;
+}
+
+.btn span {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    background: linear-gradient(to top left, #FF7E5F, #FEB47B);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.btn:hover {
+    transform: scale(105%);
+    cursor: pointer;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.form-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 3rem;
+}

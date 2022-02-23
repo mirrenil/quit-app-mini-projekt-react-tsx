@@ -1,14 +1,13 @@
 import React from "react";
-import Logo from "../StartPage/Logo";
-import ChallengeButton from "./ChallengeButton";
 import ChallengeForm from "./ChallengeForm";
+import "./Challenge.css";
+import MiniLogo from "../Progress/MiniLogo";
 
 function ChallengePage() {
   return (
-    <div className="rootStyle">
-      <Logo />
+    <div className="challenge-form">
+      <MiniLogo />
       <ChallengeForm name={""} age={0} cigarettes={0} price={0} />
-      <ChallengeButton />
     </div>
   );
 }
