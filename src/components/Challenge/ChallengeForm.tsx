@@ -4,10 +4,7 @@ import MiniLogo from "../Progress/MiniLogo";
 import './Challenge.css'
 
 interface Props {
-  name: string;
-  age: number;
-  cigarettes: number;
-  price: number;
+  saveNewChallengeData: any;
 }
 
 function ChallengeForm(props: Props) {
@@ -43,7 +40,7 @@ function ChallengeForm(props: Props) {
       price: cigarettePrice,
     }
 
-    console.log(userData);
+    props.saveNewChallengeData(userData);
   }
 
   return (

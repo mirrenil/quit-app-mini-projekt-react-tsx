@@ -2,10 +2,22 @@ import React from "react";
 import ChallengeForm from "./ChallengeForm";
 import "./ChallengePage.css";
 
-function ChallengePage() {
+interface Props {
+  saveNewChallengeData: any;
+}
+
+function ChallengePage(props: Props) {
+
+  const newChallengeDataHandler = (enteredChallengeData: any) => {
+    const challengeData = {
+      ...enteredChallengeData
+    };
+    props.saveNewChallengeData(challengeData);
+  }
+
   return (
     <div className="challenge-page">
-      <ChallengeForm name={""} age={0} cigarettes={0} price={0} />
+      <ChallengeForm saveNewChallengeData={newChallengeDataHandler} />
     </div>
   );
 }
