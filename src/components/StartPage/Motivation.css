@@ -15,5 +15,9 @@
 .motivation-body-style {
     font-size: 1.3rem;
     text-align: center;
-    max-width: 26rem;
+    max-width: 27rem;
+}
+
+.motivation-body-style span {
+    font-weight: 700;
 }
