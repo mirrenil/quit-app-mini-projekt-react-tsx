@@ -71,7 +71,7 @@ function ChallengeForm(props: Props) {
             </button>
           </Link>
         </div>
-
+        console.log(submit);
       </form>
     </div>
   );
