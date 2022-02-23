@@ -34,8 +34,9 @@ function ChallengeForm(props: Props) {
 
   const newUserDataHandler = () => {
     const userData = {
-      userName: userName,
-
+      name: userName,
+      age: userAge,
+      ciggsPerDay: 
     }
   }
 
