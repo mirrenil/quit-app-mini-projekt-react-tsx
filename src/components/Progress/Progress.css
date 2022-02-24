@@ -1,7 +1,6 @@
 .progress-page {
     height: 100vh;
-    display: flex;;
-    align-items: center;
+    display: flex;
 }
 .compliment {
     color: #eee;

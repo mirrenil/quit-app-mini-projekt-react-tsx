@@ -64,14 +64,15 @@ function ChallengeForm(props: Props) {
           <label htmlFor="price">Price per pack</label>
           <input type="number" name="price" id="price" onChange={cigarettePriceInputHandler} />
         </div>
-        <div className="form-btn">
-          <Link to="ProgressPage">
-            <button className="btn" type="submit">
-              <span>CONFIRM</span>
-            </button>
-          </Link>
-        </div>
-
+        <Link to="challengeForm">
+          <div className="form-btn">
+            <Link to="progressPage">
+              <button className="btn" type="submit">
+                <span>CONFIRM</span>
+              </button>
+            </Link>
+          </div>
+        </Link>
       </form>
     </div>
   );

@@ -7,7 +7,7 @@ import "./Progress.css"
 
 function ProgressPage() {
   return (
-    <div className="">
+    <div className="progress-page">
       <MiniLogo />
       <Compliment />
       <ChallengeData />
