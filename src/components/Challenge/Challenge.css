@@ -116,4 +116,8 @@ input[type=number] {
         width: 100%;
         max-width: 370px;
     }
+
+    .form-smoke-container label {
+        margin-left: -1rem;
+    }
 }
