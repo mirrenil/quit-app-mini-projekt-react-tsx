@@ -68,29 +68,15 @@ function ChallengeForm(props: Props) {
             <input type="number" name="price" id="price" onChange={cigarettePriceInputHandler} />
           </div>
         </div>
-<<<<<<< HEAD
-        <Link to="challengeForm">
-          <div className="form-btn">
-            <Link to="progressPage">
-              <button className="btn" type="submit">
-                <span>CONFIRM</span>
-              </button>
-            </Link>
-          </div>
-        </Link>
-      </form>
-    </div>
-=======
       </div>
       <div className="form-btn">
-        {/* <Link to="ProgressPage"> */}
+        <Link to="ProgressPage">
           <button className="btn" type="submit">
             <span>CONFIRM</span>
           </button>
-        {/* </Link> */}
+        </Link>
       </div>
     </form>
->>>>>>> 7ab579d5686e61e366086d447b8deb52e99a4777
   );
 }
 
