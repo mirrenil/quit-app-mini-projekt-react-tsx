@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import MiniLogo from "../Progress/MiniLogo";
+import './Challenge.css'
 
 interface Props {
-  name: string;
-  age: number;
-  cigarettes: number;
-  price: number;
+  saveNewChallengeData: any;
 }
 
 function ChallengeForm(props: Props) {
@@ -41,13 +40,16 @@ function ChallengeForm(props: Props) {
       price: cigarettePrice,
     }
 
-    console.log(userData);
+    props.saveNewChallengeData(userData);
   }
 
   return (
-    <div className="challenge-form">
-      <h3 className="form-title">Start New Challenge</h3>
-      <form className="form-style" action="newUser" onSubmit={submitHandler}>
+    <form className="form-style" action="newUser" onSubmit={submitHandler}>
+      <div>
+        <MiniLogo />
+      </div>
+      <div className="form-container">
+        <legend className="form-title">Start New Challenge</legend>
         <div className="form-inp">
           <label htmlFor="name">Name</label>
           <input type="text" name="name" id="name" onChange={userNameInputHandler} />
@@ -56,14 +58,17 @@ function ChallengeForm(props: Props) {
           <label htmlFor="age">Age</label>
           <input type="number" name="age" id="age" onChange={userAgeInputHandler} />
         </div>
-        <div className="form-inp">
-          <label htmlFor="cigarettes">Cigarettes per day</label>
-          <input type="number" name="cigarettes" id="cigarettes" onChange={cigaretteInputHandler} />
+        <div className="form-smoke-container">
+          <div className="form-inp-smoke">
+            <label htmlFor="cigarettes">Cigarettes /day</label>
+            <input type="number" name="cigarettes" id="cigarettes" onChange={cigaretteInputHandler} />
+          </div>
+          <div className="form-inp-smoke">
+            <label htmlFor="price">Price /pack</label>
+            <input type="number" name="price" id="price" onChange={cigarettePriceInputHandler} />
+          </div>
         </div>
-        <div className="form-inp">
-          <label htmlFor="price">Price per pack</label>
-          <input type="number" name="price" id="price" onChange={cigarettePriceInputHandler} />
-        </div>
+<<<<<<< HEAD
         <Link to="challengeForm">
           <div className="form-btn">
             <Link to="progressPage">
@@ -75,6 +80,17 @@ function ChallengeForm(props: Props) {
         </Link>
       </form>
     </div>
+=======
+      </div>
+      <div className="form-btn">
+        {/* <Link to="ProgressPage"> */}
+          <button className="btn" type="submit">
+            <span>CONFIRM</span>
+          </button>
+        {/* </Link> */}
+      </div>
+    </form>
+>>>>>>> 7ab579d5686e61e366086d447b8deb52e99a4777
   );
 }
 

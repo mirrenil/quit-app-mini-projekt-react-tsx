@@ -1,13 +1,23 @@
 import React from "react";
 import ChallengeForm from "./ChallengeForm";
-import "./Challenge.css";
-import MiniLogo from "../Progress/MiniLogo";
+import "./ChallengePage.css";
 
-function ChallengePage() {
+interface Props {
+  saveNewChallengeData: any;
+}
+
+function ChallengePage(props: Props) {
+
+  const newChallengeDataHandler = (enteredChallengeData: any) => {
+    const challengeData = {
+      ...enteredChallengeData
+    };
+    props.saveNewChallengeData(challengeData);
+  }
+
   return (
-    <div className="challenge-form">
-      <MiniLogo />
-      <ChallengeForm name={""} age={0} cigarettes={0} price={0} />
+    <div className="challenge-page">
+      <ChallengeForm saveNewChallengeData={newChallengeDataHandler} />
     </div>
   );
 }

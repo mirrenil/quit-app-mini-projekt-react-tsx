@@ -12,7 +12,7 @@ function MiniLogo() {
 }
 
 const logoDiv: CSSProperties = {
-  marginTop: '50px',
+
 };
 
 export default MiniLogo;

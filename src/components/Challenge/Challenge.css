@@ -1,44 +1,74 @@
-.challenge-form {
-    /* height: 100vh; */
+.form-style {
+    height: 100vh;
+    width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    padding: 1.2rem;
+    margin: 0 auto;
+    padding: 1.4rem 0;
 }
-.form-title {
-    font-size: 1.6rem;
-}
-.form-style {
+.form-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: .8rem;
+    width: 100%;
+    max-width: 400px;
 }
-.title{
-    font-size: 3rem;
+.form-title {
+    font-family: 'Roboto', 'Oxygen', sergoe UI;
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+form label {
+    padding-left: .8rem;
+    margin-bottom: .5em;
 }
 form input {
-    height: 20px;
-    width: 20rem;
     border-radius: 8px;
     border: none;
-    padding: .5rem;
-    font-size: 1rem;
+    padding: .7rem .8rem;
+    font-size: 1.2rem;
+    font-family: 'roboto';
+    color: #303030;
 }
 form input:focus {
     outline: 3px solid #FA8022;
     box-shadow: rgba(94, 43, 23, 0.096) 0px 4px 25px;
 }
-form label {
-    padding-left: .4em;
-    margin-bottom: .2em;
-}
 .form-inp{
     display: flex;
     flex-direction: column;
-    margin-bottom: 1rem;
+    margin-bottom: .6rem;
+    width: 100%;
+}
+.form-smoke-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    gap: 1rem;
+}
+.form-inp-smoke {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 93%;
+}
+
+.form-smoke-container input {
+    width: 100%;
+    max-width: 165px;
+}
+
+.form-smoke-container label {
+    width: 100%;
+    text-align: left;
 }
 
 .btn {
@@ -75,9 +105,19 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
-.form-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 3rem;
+@media (max-width: 500px) {
+    .form-smoke-container {
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    .form-smoke-container input {
+        width: 100%;
+        max-width: 370px;
+    }
+
+    .form-smoke-container label {
+        margin-left: -1rem;
+    }
 }
