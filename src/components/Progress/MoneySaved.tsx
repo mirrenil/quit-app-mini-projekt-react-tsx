@@ -2,9 +2,9 @@ import React from "react";
 
 function MoneySaved() {
   return (
-    <div className="money-saved">
-      <span>You have saved......</span>
-      <h3>(amount)</h3>
+    <div className="progress-div monvey-saved-div">
+      <h3>425 SEK</h3>
+      <span>saved by not smoking.</span>
     </div>
   );
 }

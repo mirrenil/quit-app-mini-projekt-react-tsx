@@ -1,31 +1,111 @@
 .progress-page {
     height: 100vh;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 2.5rem;
 }
-.compliment {
-    color: #eee;
+.progress-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2rem 0;
+}
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.progress-sub-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.challenge-data-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
 }
 
-.days-completed {
-    flex: 1;
-    background-color: #FFC1B2;
+.challenge-data-sub-container {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+}
+
+.compliment-div {
+    color: #f1f1f1;
+    text-align: left;
+}
+.compliment-div h3 {
+    font-size: 2rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+.compliment-div p {
+    font-size: .8rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.progress-div {
+    background: linear-gradient(to top left, #fda58f, #ffcaa1);
     color: #eee;
-    width: 250px;
+    width: 100%;
     border-radius: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
 }
 
-.not-smoked {
-    background-color: #FFC1B2;
-    color: #eee;
-    width: 100px;
-    border-radius: 1em;
+.days-completed-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
-.money-saved {
-    background-color: #FFC1B2;
-    color: #eee;
-    width: 100px;
-    border-radius: 1em;
+.days-completed-div h3{
+   font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.days-completed-div p{
+    padding: 0;
+}
+.monvey-saved-div {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.monvey-saved-div h3 {
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
 }
 
+/* .progress-sub-container {
+    text-align: center;
+} */
+.cigarettes-not-smoked-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
 
+.cigarettes-not-smoked-div h3 {
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+}
