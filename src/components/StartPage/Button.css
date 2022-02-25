@@ -2,7 +2,8 @@
     background-color: #fafafa;
     border: none;
     border-radius: 100px;
-    padding: 1rem 3rem;
+    height: 4rem;
+    width: 15rem;
     transition: .150s;
     box-shadow: rgba(94, 43, 23, 0.199) 0px 4px 25px;
 }

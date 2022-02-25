@@ -33,12 +33,14 @@ function ChallengeForm(props: Props) {
   const submitHandler = (e: any) => {
     e.preventDefault();
 
-    const userData = {
-      name: userName,
-      age: userAge,
-      cigarettes: cigarettes,
-      price: cigarettePrice,
-    }
+    const userData = [
+        {
+        name: userName,
+        age: userAge,
+        cigarettes: cigarettes,
+        price: cigarettePrice,
+        },
+      ]
 
     props.saveNewChallengeData(userData);
   }

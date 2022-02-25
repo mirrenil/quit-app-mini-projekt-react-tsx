@@ -1,4 +1,5 @@
 import React from "react";
+import ErrorBoundary from "../../ErrorBoundary";
 import ChallengeData from "./ChallengeData";
 import Compliment from "./Compliment";
 import EndChallengeButton from "./EndChallengeButton";

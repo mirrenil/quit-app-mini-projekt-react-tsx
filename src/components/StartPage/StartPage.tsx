@@ -1,4 +1,5 @@
 import React from "react";
+import ErrorBoundary from "../../ErrorBoundary";
 import Logo from "./Logo";
 import MotivationText from "./MotivationText";
 import StartButton from "./StartButton";
@@ -8,7 +9,9 @@ function StartPage() {
   return (
     <div className="startpage-style">
       <Logo />
-      <MotivationText />
+      <ErrorBoundary>
+        <MotivationText />
+      </ErrorBoundary>
       <StartButton />
     </div>
   );
