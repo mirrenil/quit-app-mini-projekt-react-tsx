@@ -12,7 +12,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    padding: 2rem 0;
+    padding: 2.5rem 0;
 }
 .logo {
     display: flex;
@@ -38,23 +38,22 @@
 }
 
 .compliment-div {
-    color: #f1f1f1;
+    color: #FAFAFA;
     text-align: left;
 }
 .compliment-div h3 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-top: 0.25rem;
     margin-bottom: 0.25rem;
 }
 .compliment-div p {
-    font-size: .8rem;
+    font-size: 1rem;
     margin-top: 0;
     margin-bottom: 0;
 }
 
 .progress-div {
     background: linear-gradient(to top left, #fda58f, #ffcaa1);
-    color: #eee;
     width: 100%;
     border-radius: 1em;
     display: flex;
@@ -72,12 +71,9 @@
 }
 
 .days-completed-div h3{
-   font-size: 2rem;
+   font-size: 2.5rem;
     margin-top: 0;
-    margin-bottom: 0;
-}
-.days-completed-div p{
-    padding: 0;
+    margin-bottom: -.6rem;
 }
 .monvey-saved-div {
     width: 100%;
@@ -87,7 +83,7 @@
     align-items: center;
 }
 .monvey-saved-div h3 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-top: 0;
     margin-bottom: 0;
     text-align: center;
@@ -104,7 +100,7 @@
 }
 
 .cigarettes-not-smoked-div h3 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-top: 0;
     margin-bottom: 0;
     text-align: center;
