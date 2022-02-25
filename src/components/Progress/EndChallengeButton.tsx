@@ -14,8 +14,6 @@ function EndChallengeButton() {
         </Link>
       </div>
     </Link>
-
-
   );
 }
 

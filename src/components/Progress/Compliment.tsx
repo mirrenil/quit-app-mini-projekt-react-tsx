@@ -2,9 +2,9 @@ import React from "react";
 
 function Compliment() {
   return (
-    <div className="compliment">
+    <div className="compliment-div">
       <p>You're doing great </p>
-      <h3>(name of user here)</h3>
+      <h3>Magic Mike</h3>
 
     </div>
   );

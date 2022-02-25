@@ -6,10 +6,12 @@ import MoneySaved from "./MoneySaved";
 
 function ChallengeData() {
   return (
-    <div>
+    <div className="challenge-data-container">
       <DaysCompleted />
-      <CigarettesNotSmoked />
-      <MoneySaved/>
+      <div className="challenge-data-sub-container">
+        <CigarettesNotSmoked />
+        <MoneySaved/>
+      </div>
     </div>
   );
 }

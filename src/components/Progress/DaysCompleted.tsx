@@ -2,8 +2,9 @@ import React from "react";
 
 function DaysCompleted() {
   return (
-    <div className="days-completed">
-      <span>...completed without having a smoke</span>
+    <div className="progress-div days-completed-div">
+      <h3>14 Days</h3>
+      <p>Completed without having a smoke.</p>
     </div>
   );
 }

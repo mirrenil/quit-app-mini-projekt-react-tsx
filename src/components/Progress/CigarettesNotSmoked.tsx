@@ -2,8 +2,9 @@ import React from "react";
 
 function CigarettesNotSmoked() {
   return (
-    <div className="not-smoked">
-      <span></span>
+    <div className="progress-div cigarettes-not-smoked-div">
+      <h3>130</h3>
+      <span>Cigarettes not smoked.</span>
     </div>
   )
 }

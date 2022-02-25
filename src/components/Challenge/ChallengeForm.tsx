@@ -72,8 +72,8 @@ function ChallengeForm(props: Props) {
         </div>
       </div>
       <div className="form-btn">
-        <Link to="/ProgressPage" >
-          <button  className="btn" type="submit" >
+        <Link to="/ProgressPage">
+          <button className="btn" type="submit">
             <span>CONFIRM</span>
           </button>
         </Link>
