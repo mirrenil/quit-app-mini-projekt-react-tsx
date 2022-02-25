@@ -1,4 +1,5 @@
 import React from "react";
+import ErrorBoundary from "../../ErrorBoundary";
 import ChallengeData from "./ChallengeData";
 import Compliment from "./Compliment";
 import EndChallengeButton from "./EndChallengeButton";
@@ -9,8 +10,13 @@ function ProgressPage() {
   return (
     <div className="progress-page">
       <MiniLogo />
-      <Compliment />
-      <ChallengeData />
+      <ErrorBoundary>
+        <Compliment />
+      </ErrorBoundary>
+       <ErrorBoundary>
+        <ChallengeData />
+      </ErrorBoundary>
+      
       <EndChallengeButton />
     </div>
   );

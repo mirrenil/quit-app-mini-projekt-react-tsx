@@ -33,12 +33,14 @@ function ChallengeForm(props: Props) {
   const submitHandler = (e: any) => {
     e.preventDefault();
 
-    const userData = {
-      name: userName,
-      age: userAge,
-      cigarettes: cigarettes,
-      price: cigarettePrice,
-    }
+    const userData = [
+        {
+        name: userName,
+        age: userAge,
+        cigarettes: cigarettes,
+        price: cigarettePrice,
+        },
+      ]
 
     props.saveNewChallengeData(userData);
   }
@@ -70,8 +72,8 @@ function ChallengeForm(props: Props) {
         </div>
       </div>
       <div className="form-btn">
-        <Link to="ProgressPage">
-          <button className="btn" type="submit">
+        <Link to="/ProgressPage" >
+          <button  className="btn" type="submit" >
             <span>CONFIRM</span>
           </button>
         </Link>
