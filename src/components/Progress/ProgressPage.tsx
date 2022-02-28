@@ -25,7 +25,10 @@ function ProgressPage(props: Props) {
       </div>
       <div className="progress-sub-container">
         <Compliment name={props.userData.name}/>
-        <ChallengeData />
+        <ChallengeData 
+          cigarettes={props.userData.cigarettes} 
+          price={props.userData.price}
+        />
       </div>
       <EndChallengeButton />
     </div>

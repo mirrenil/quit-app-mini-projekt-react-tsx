@@ -1,9 +1,13 @@
 import React from "react";
 
-function MoneySaved() {
+interface Props {
+  price: number,
+}
+
+function MoneySaved(props: Props) {
   return (
     <div className="progress-div monvey-saved-div">
-      <h3>425:-</h3>
+      <h3>{props.price}:-</h3>
       <span>saved by not smoking.</span>
     </div>
   );

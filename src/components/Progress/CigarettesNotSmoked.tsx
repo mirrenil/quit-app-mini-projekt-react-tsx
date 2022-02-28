@@ -1,10 +1,14 @@
 import React from "react";
 
-function CigarettesNotSmoked() {
+interface Props {
+  cigarettes: number,
+}
+
+function CigarettesNotSmoked(props: Props) {
   return (
     <div className="progress-div cigarettes-not-smoked-div">
-      <h3>130</h3>
-      <span>Cigarettes not smoked.</span>
+      <h3>{props.cigarettes}</h3>
+      <span>Cigarettes avoided.</span>
     </div>
   )
 }
