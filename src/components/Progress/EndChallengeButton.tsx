@@ -4,8 +4,6 @@ import "../StartPage/Button.css"
 
 function EndChallengeButton() {
   return (
-
-    <Link to="/">
       <div>
         <Link to="/">
           <button className="btn">
@@ -13,7 +11,6 @@ function EndChallengeButton() {
           </button>
         </Link>
       </div>
-    </Link>
   );
 }
 
