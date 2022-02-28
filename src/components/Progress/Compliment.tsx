@@ -1,10 +1,14 @@
 import React from "react";
 
-function Compliment() {
+interface Props {
+  name: string
+}
+
+function Compliment(props: Props) {
   return (
     <div className="compliment-div">
       <p>You're doing great </p>
-      <h3>Magic Mike</h3>
+      <h3>{props.name}</h3>
 
     </div>
   );

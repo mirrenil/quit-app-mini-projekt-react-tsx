@@ -61,7 +61,7 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding: 2rem 0;
+    padding: 2rem 1rem;
 }
 
 .days-completed-div {
@@ -105,4 +105,21 @@
     margin-top: 0;
     margin-bottom: 0;
     text-align: center;
+}
+
+@media (max-width: 500px) {
+    .compliment-div h3 {
+        font-size: 2rem;
+    }
+    .days-completed-div h3{
+        font-size: 2rem;
+     }
+
+     .monvey-saved-div h3 {
+        font-size: 2rem;
+    }
+
+    .cigarettes-not-smoked-div h3 {
+        font-size: 2rem;
+    }
 }
