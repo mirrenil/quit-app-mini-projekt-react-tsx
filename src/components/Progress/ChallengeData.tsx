@@ -13,7 +13,7 @@ function ChallengeData({userData}: Props) {
     <div className="challenge-data-container">
       <DaysCompleted userData={userData}/>
       <div className="challenge-data-sub-container">
-        <CigarettesNotSmoked cigarettes={userData.cigarettes} />
+        <CigarettesNotSmoked userData={userData} />
         <MoneySaved userData={userData} />
       </div>
     </div>

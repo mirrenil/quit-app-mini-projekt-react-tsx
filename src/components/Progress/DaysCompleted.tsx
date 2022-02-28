@@ -5,7 +5,7 @@ interface Props {
   userData: User;
 }
 
-function DaysCompleted({userData}: Props) {
+ function DaysCompleted({userData}: Props) {
   const [days, setCount] = useState(null);
 
   useEffect(() => {
