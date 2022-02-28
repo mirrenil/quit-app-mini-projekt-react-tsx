@@ -1,44 +1,43 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { ChangeEvent, FormEvent, useState } from "react";
+import { User } from "../../data";
 import MiniLogo from "../Progress/MiniLogo";
 import './Challenge.css'
 
 interface Props {
-  saveNewChallengeData: any;
+  saveNewChallengeData: (user: User) => void ;
 }
 
 function ChallengeForm(props: Props) {
 
   const [userName, setUserName] = useState('');
-  const [userAge, setUserAge] = useState('');
   const [cigarettes, setCigarettes] = useState('');
   const [cigarettePrice, setCigarettePrice] = useState('');
 
-  const userNameInputHandler = (e: any) => {
+  const userNameInputHandler = (e: ChangeEvent<HTMLInputElement>) => {
     setUserName(e.target.value);
   }
 
-  const userAgeInputHandler = (e: any) => {
-    setUserAge(e.target.value);
-  }
+  // const userAgeInputHandler = (e: ChangeEvent<HTMLInputElement>) => {
+  //   setUserAge(e.target.value);
+  // }
 
-  const cigaretteInputHandler = (e: any) => {
+  const cigaretteInputHandler = (e: ChangeEvent<HTMLInputElement>) => {
     setCigarettes(e.target.value);
   }
 
-  const cigarettePriceInputHandler = (e: any) => {
+  const cigarettePriceInputHandler = (e: ChangeEvent<HTMLInputElement>) => {
     setCigarettePrice(e.target.value);
   }
 
-  const submitHandler = (e: any) => {
+  const submitHandler = (e: FormEvent) => {
     e.preventDefault();
     
-    const userData = 
+    const userData: User = 
         {
         name: userName,
-        age: userAge,
-        cigarettes: cigarettes,
-        price: cigarettePrice,
+        cigarettes: Number(cigarettes),
+        price: Number(cigarettePrice),
+        start: new Date()
         };
         console.log(userData);
       props.saveNewChallengeData(userData);
@@ -55,10 +54,10 @@ function ChallengeForm(props: Props) {
           <label htmlFor="name">Name</label>
           <input type="text" name="name" id="name" onChange={userNameInputHandler} />
         </div>
-        <div className="form-inp">
+        {/* <div className="form-inp">
           <label htmlFor="age">Age</label>
           <input type="number" name="age" id="age" onChange={userAgeInputHandler} />
-        </div>
+        </div> */}
         <div className="form-smoke-container">
           <div className="form-inp-smoke">
             <label htmlFor="cigarettes">Cigarettes /day</label>

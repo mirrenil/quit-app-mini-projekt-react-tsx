@@ -1,9 +1,8 @@
-import React, { useState } from "react";
-import { BrowserRouter, Route, Routes, Link, useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import { User } from "../data";
 import "./App.css";
 import ChallengePage from "./Challenge/ChallengePage";
-import ChallengeData from "./Progress/ChallengeData";
 import ProgressPage from "./Progress/ProgressPage";
 import StartPage from "./StartPage/StartPage";
 
@@ -13,14 +12,28 @@ import StartPage from "./StartPage/StartPage";
 
 function App() {
   const navigate = useNavigate()
-  console.log(navigate)
   const [challengeData, setChallengeData] = useState<User>()
+  const [_, setDate] = useState(new Date())
 
   const newChallengeDataHandler = (enteredUserData: User) => {
     setChallengeData(enteredUserData);
-    console.log(enteredUserData);
-    navigate("progressPage")
+    navigate("progressPage");
+    // skapa en timout som löper ut om 24 timmar
   };
+
+  useEffect(() => {
+    if (!challengeData) return;
+
+    const { start } = challengeData;
+    const timeoutDate = new Date(start)
+    timeoutDate.setDate(start.getDate() + 1)
+
+    const diffTime = Math.abs(new Date().getTime() - timeoutDate.getTime());
+
+    setTimeout(() => {
+      setDate(new Date())
+    }, diffTime);
+  }, [challengeData])
 
   return (
     <div className="app">

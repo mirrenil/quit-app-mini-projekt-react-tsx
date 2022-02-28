@@ -1,4 +1,5 @@
 import React from "react";
+import DaysCompleted from "./DaysCompleted";
 
 interface Props {
   cigarettes: number,
@@ -12,5 +13,11 @@ function CigarettesNotSmoked(props: Props) {
     </div>
   )
 }
+
+// function DaysWithoutSmoke(cigarettes: Number) {
+//   return (cigarettes * DaysCompleted)
+// }
+
+
 
 export default CigarettesNotSmoked;

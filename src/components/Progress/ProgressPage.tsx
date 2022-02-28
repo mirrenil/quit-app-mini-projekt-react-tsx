@@ -1,7 +1,6 @@
 import React from "react";
 import { Navigate } from "react-router-dom";
 import { User } from "../../data";
-import ErrorBoundary from "../../ErrorBoundary";
 import ChallengeData from "./ChallengeData";
 import Compliment from "./Compliment";
 import EndChallengeButton from "./EndChallengeButton";
@@ -26,8 +25,7 @@ function ProgressPage(props: Props) {
       <div className="progress-sub-container">
         <Compliment name={props.userData.name}/>
         <ChallengeData 
-          cigarettes={props.userData.cigarettes} 
-          price={props.userData.price}
+          userData={props.userData} 
         />
       </div>
       <EndChallengeButton />
@@ -40,12 +38,7 @@ function ProgressPage(props: Props) {
 
 // }
 
-// function CalculateMoneySaved(props: Props) {
 
-// }
 
-// function DaysWithoutSmoke(props: Props) {
-
-// }
 
 export default ProgressPage;

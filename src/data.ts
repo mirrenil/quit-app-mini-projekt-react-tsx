@@ -1,6 +1,6 @@
 export interface User {
     name: string,
-    age: number,
+    start: Date,
     cigarettes: number,
     price: number,
 }
