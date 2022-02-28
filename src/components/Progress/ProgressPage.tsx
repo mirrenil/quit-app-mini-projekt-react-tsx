@@ -1,4 +1,6 @@
 import React from "react";
+import { Navigate } from "react-router-dom";
+import { User } from "../../data";
 import ErrorBoundary from "../../ErrorBoundary";
 import ChallengeData from "./ChallengeData";
 import Compliment from "./Compliment";
@@ -7,11 +9,13 @@ import MiniLogo from "./MiniLogo";
 import "./Progress.css";
 
 interface Props {
-  data: any;
+  userData?: User;
 }
 
 function ProgressPage(props: Props) {
-  console.log(props.data);
+  if(!props.userData) {
+    return <Navigate to="/" />
+  }
 
   return (
     <div className="progress-page">
@@ -20,7 +24,7 @@ function ProgressPage(props: Props) {
       <MiniLogo  />
       </div>
       <div className="progress-sub-container">
-        <Compliment />
+        <Compliment name={props.userData.name}/>
         <ChallengeData />
       </div>
       <EndChallengeButton />

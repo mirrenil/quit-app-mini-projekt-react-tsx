@@ -32,21 +32,20 @@ function ChallengeForm(props: Props) {
 
   const submitHandler = (e: any) => {
     e.preventDefault();
-
-    const userData = [
+    
+    const userData = 
         {
         name: userName,
         age: userAge,
         cigarettes: cigarettes,
         price: cigarettePrice,
-        },
-      ]
-
-    props.saveNewChallengeData(userData);
+        };
+        console.log(userData);
+      props.saveNewChallengeData(userData);
   }
 
   return (
-    <form className="form-style" action="newUser" onSubmit={submitHandler}>
+    <form className="form-style" onSubmit={submitHandler}>
       <div>
         <MiniLogo />
       </div>
@@ -72,11 +71,11 @@ function ChallengeForm(props: Props) {
         </div>
       </div>
       <div className="form-btn">
-        <Link to="/ProgressPage">
+        {/* <Link to="/ProgressPage"> */}
           <button className="btn" type="submit">
             <span>CONFIRM</span>
           </button>
-        </Link>
+        {/* </Link> */}
       </div>
     </form>
   );

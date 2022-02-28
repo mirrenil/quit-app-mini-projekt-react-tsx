@@ -1,23 +1,17 @@
 import React from "react";
+import { User } from "../../data";
 import ChallengeForm from "./ChallengeForm";
 import "./ChallengePage.css";
 
 interface Props {
-  saveNewChallengeData: any;
+  saveNewChallengeData: (user: User) => void;
 }
 
 function ChallengePage(props: Props) {
 
-  const newChallengeDataHandler = (enteredChallengeData: any) => {
-    const challengeData = {
-      ...enteredChallengeData
-    };
-    props.saveNewChallengeData(challengeData);
-  }
-
   return (
     <div className="challenge-page">
-      <ChallengeForm saveNewChallengeData={newChallengeDataHandler} />
+      <ChallengeForm saveNewChallengeData={props.saveNewChallengeData} />
     </div>
   );
 }
