@@ -40,9 +40,14 @@ function App() {
   }, [challengeData])
 
   useEffect(() => {
+    if (!challengeData) return;
     localStorage.setItem('challengeData', JSON.stringify(challengeData))
   }, [challengeData])
 
+  useEffect(() => {
+    if(!challengeData) return;
+    navigate("progressPage");
+  })
   return (
     <div className="app">
       <Routes>
