@@ -12,8 +12,12 @@ import StartPage from "./StartPage/StartPage";
 
 function App() {
   const navigate = useNavigate()
-  const [challengeData, setChallengeData] = useState<User>()
+  const [challengeData, setChallengeData] = useState<User>(() => {
+    const localData = localStorage.getItem('challengeData');
+    return localData ? JSON.parse(localData) : '';
+  });
   const [_, setDate] = useState(new Date())
+  
 
   const newChallengeDataHandler = (enteredUserData: User) => {
     setChallengeData(enteredUserData);
@@ -33,6 +37,10 @@ function App() {
     setTimeout(() => {
       setDate(new Date())
     }, diffTime);
+  }, [challengeData])
+
+  useEffect(() => {
+    localStorage.setItem('challengeData', JSON.stringify(challengeData))
   }, [challengeData])
 
   return (
