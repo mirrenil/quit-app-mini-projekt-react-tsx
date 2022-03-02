@@ -16,6 +16,7 @@ function ChallengeForm(props: Props) {
     setUserName(e.target.value);
   };
 
+
   const cigaretteInputHandler = (e: ChangeEvent<HTMLInputElement>) => {
     setCigarettes(e.target.value);
   };
@@ -26,7 +27,6 @@ function ChallengeForm(props: Props) {
 
   const submitHandler = (e: FormEvent) => {
     e.preventDefault();
-
     const userData: User = {
       name: userName,
       cigarettes: Number(cigarettes),
