@@ -6,17 +6,6 @@ interface Props {
 }
 
  function DaysCompleted({userData}: Props) {
-  const [days, setCount] = useState(null);
-
-  useEffect(() => {
-    fetch("//www.tickcounter.com/static/js/loader.js")
-    .then((res) => {
-      return res.json()
-    })
-    .then((data) => {
-      setCount(data)
-    })
-  })
 
   function diffDates(date1: Date, date2: Date) {
     const diffTime = Math.abs(date2.getTime() - date1.getTime());

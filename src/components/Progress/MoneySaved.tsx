@@ -3,7 +3,6 @@ import { User } from "../../data";
 
 interface Props {
   userData: User;
-
 }
 
 function MoneySaved(props: Props) {

@@ -17,10 +17,6 @@ function ChallengeForm(props: Props) {
     setUserName(e.target.value);
   }
 
-  // const userAgeInputHandler = (e: ChangeEvent<HTMLInputElement>) => {
-  //   setUserAge(e.target.value);
-  // }
-
   const cigaretteInputHandler = (e: ChangeEvent<HTMLInputElement>) => {
     setCigarettes(e.target.value);
   }
@@ -39,7 +35,6 @@ function ChallengeForm(props: Props) {
         price: Number(cigarettePrice),
         start: new Date()
       };
-      console.log(userData);
       props.saveNewChallengeData(userData);
   }
 
@@ -54,10 +49,6 @@ function ChallengeForm(props: Props) {
           <label htmlFor="name">Name</label>
           <input type="text" name="name" id="name" onChange={userNameInputHandler} />
         </div>
-        {/* <div className="form-inp">
-          <label htmlFor="age">Age</label>
-          <input type="number" name="age" id="age" onChange={userAgeInputHandler} />
-        </div> */}
         <div className="form-smoke-container">
           <div className="form-inp-smoke">
             <label htmlFor="cigarettes">Cigarettes /day</label>
@@ -70,11 +61,9 @@ function ChallengeForm(props: Props) {
         </div>
       </div>
       <div className="form-btn">
-        {/* <Link to="/ProgressPage"> */}
-          <button className="btn" type="submit">
-            <span>CONFIRM</span>
-          </button>
-        {/* </Link> */}
+        <button className="btn" type="submit">
+          <span>CONFIRM</span>
+        </button>
       </div>
     </form>
   );

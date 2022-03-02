@@ -6,18 +6,11 @@ import ChallengePage from "./Challenge/ChallengePage";
 import ProgressPage from "./Progress/ProgressPage";
 import StartPage from "./StartPage/StartPage";
 
-// const StartPage = lazy(() => import ("./StartPage/StartPage"))
-// const ChallengePage = lazy(() => import("./Challenge/ChallengePage"));
-// const ProgressPage = lazy(() => import("./Progress/ProgressPage"));
-
 function App() {
   const navigate = useNavigate()
-  const [challengeData, setChallengeData] = useState<User>(() => {
-    const localData = localStorage.getItem('challengeData');
-    return localData ? JSON.parse(localData) : '';
-  });
+  const [challengeData, setChallengeData] = useState<User>();
   const [_, setDate] = useState(new Date())
-
+  
   const newChallengeDataHandler = (enteredUserData: User) => {
     setChallengeData(enteredUserData);
     navigate("progressPage");
@@ -25,27 +18,34 @@ function App() {
 
   useEffect(() => {
     if (!challengeData) return;
-
     const { start } = challengeData;
     const timeoutDate = new Date(start)
     timeoutDate.setDate(start.getDate() + 1)
-
+    
     const diffTime = Math.abs(new Date().getTime() - timeoutDate.getTime());
-
+    console.log(timeoutDate);
+    
     setTimeout(() => {
       setDate(new Date())
     }, diffTime);
-  }, [challengeData])
-
-  useEffect(() => {
-    if (!challengeData) return;
-    localStorage.setItem('challengeData', JSON.stringify(challengeData))
-  }, [challengeData])
-
-  useEffect(() => {
-    if(!challengeData) return;
-    navigate("progressPage");
-  })
+  }, [])
+  
+  // useEffect(() => {
+  //   const localData = localStorage.getItem('challengeData');
+  //   if(localData) {
+  //     setChallengeData(JSON.parse(localData));
+  //   }
+  // }, [])
+  
+  // useEffect(() => {
+  //   if (!challengeData) return;
+  //   localStorage.setItem('challengeData', JSON.stringify(challengeData))
+  // });
+  
+  // useEffect(() => {
+  //   if(!challengeData) return;
+  //   navigate("progressPage");
+  // })
 
   return (
     <div className="app">

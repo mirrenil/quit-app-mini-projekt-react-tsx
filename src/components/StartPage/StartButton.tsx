@@ -3,15 +3,15 @@ import { Link } from "react-router-dom";
 import "./Button.css";
 function StartButton() {
   return (
-    <Link to="StartPage">
+    // <Link id="RouterNavLink" to="StartPage">
       <div>
-        <Link to="challengePage">
+        <Link id="RouterNavLink" to="challengePage">
           <button className="btn">
             <span>START</span>
           </button>
         </Link>
       </div>
-    </Link>
+    // </Link>
   );
 }
 
