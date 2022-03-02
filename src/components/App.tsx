@@ -17,12 +17,10 @@ function App() {
     return localData ? JSON.parse(localData) : '';
   });
   const [_, setDate] = useState(new Date())
-  
 
   const newChallengeDataHandler = (enteredUserData: User) => {
     setChallengeData(enteredUserData);
     navigate("progressPage");
-    // skapa en timout som löper ut om 24 timmar
   };
 
   useEffect(() => {
@@ -48,6 +46,7 @@ function App() {
     if(!challengeData) return;
     navigate("progressPage");
   })
+
   return (
     <div className="app">
       <Routes>

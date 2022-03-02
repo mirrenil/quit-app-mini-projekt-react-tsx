@@ -1,4 +1,4 @@
-import React, { ChangeEvent, FormEvent, useState } from "react";
+import React, { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import { User } from "../../data";
 import MiniLogo from "../Progress/MiniLogo";
 import './Challenge.css'
@@ -33,13 +33,13 @@ function ChallengeForm(props: Props) {
     e.preventDefault();
     
     const userData: User = 
-        {
+      {
         name: userName,
         cigarettes: Number(cigarettes),
         price: Number(cigarettePrice),
         start: new Date()
-        };
-        console.log(userData);
+      };
+      console.log(userData);
       props.saveNewChallengeData(userData);
   }
 
