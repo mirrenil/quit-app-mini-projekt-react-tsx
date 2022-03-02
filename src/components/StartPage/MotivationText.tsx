@@ -28,10 +28,6 @@ function MotivationText() {
       })
     }, []);
 
- 
-
-  // window.addEventListener('onload', getWeatherData);
-
   return (
     <div className="motivation-container">
       <p className="motivation-header-style">Did you know?</p>
