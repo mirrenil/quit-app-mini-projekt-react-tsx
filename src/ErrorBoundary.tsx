@@ -21,13 +21,13 @@ class ErrorBoundary extends React.Component<Props, State> {
 
   componentDidCatch(error: Error, info: ErrorInfo) {
     console.error("ERROR");
-    //logErrorToMyService(error, errorInfo);
+    logErrorToMyService(error, errorInfo);
   }
 
   render() {
     if (this.state.hasError) {
       // You can render any custom fallback UI
-      return <h1>Something went wrong.</h1>;
+      return <h1>Oops! Something went wrong 🤯</h1>;
     }
 
     return this.props.children;
@@ -35,3 +35,10 @@ class ErrorBoundary extends React.Component<Props, State> {
 }
 
 export default ErrorBoundary;
+function logErrorToMyService(error: Error, errorInfo: any) {
+  throw new Error("Function not implemented.");
+}
+
+function errorInfo(error: Error, errorInfo: any) {
+  throw new Error("Function not implemented.");
+}
