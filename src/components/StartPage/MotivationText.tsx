@@ -16,7 +16,7 @@ function MotivationText() {
         const temp = data.main.temp
         setData(temp);
         if (temp < 0) {
-          setMessage('Dont let the cold unmotivate you, stop smoking today. Get dressed and enjoy a fresh breeze instead.');
+          setMessage('Dont let the cold demotivate you, stop smoking today. Get dressed and enjoy a fresh breeze instead.');
         } else if (temp > 0 && temp < 10) {
           setMessage('A bit chill today? Why not take advantage of it and spend some time playing with friends. Leave your smoke in the trash')
         }
@@ -30,7 +30,6 @@ function MotivationText() {
 
 
 
-  // window.addEventListener('onload', getWeatherData);
 
   return (
     <div className="motivation-container">
