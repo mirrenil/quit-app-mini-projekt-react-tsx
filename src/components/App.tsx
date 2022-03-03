@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import { User } from "../data";
-import "./App.css";
 import ChallengePage from "./Challenge/ChallengePage";
 import ProgressPage from "./Progress/ProgressPage";
 import StartPage from "./StartPage/StartPage";
+import "./App.css";
 
 const loadFromLS = () => {
   const localData = localStorage.getItem('challengeData');
@@ -41,18 +41,10 @@ function App() {
     }, diffTime);
   }, [])
 
-
-
-
   useEffect(() => {
     if (!challengeData) return;
     localStorage.setItem('challengeData', JSON.stringify(challengeData))
   });
-
-  // useEffect(() => {
-  //   if (!challengeData) return;
-  //   navigate("progressPage");
-  // })
 
   return (
     <div className="app">
