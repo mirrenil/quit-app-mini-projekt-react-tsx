@@ -28,3 +28,16 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+# Requirements for passing:
+- [x] The project contains and uses at least 8 components, of which at least 3 are "stateful" components.
+- [x] Git and GitHub have been used.
+- [x] Projectmap contains a README.md file.
+- [x] The project is submitted on time.
+- [x] Oral presentation is completed.
+
+### VG grade:
+- [x] All points for passing are met.
+- [x] React Router has been used to dynamically update the URL.
+- [x] An "ErrorBoundry" component must be created and used in at least 3 places.
+- [x] Data from a web API is retrieved and displayed on the page.
