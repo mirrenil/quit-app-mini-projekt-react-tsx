@@ -1,6 +1,5 @@
 import React from "react";
 import { User } from "../../data";
-// import DaysCompleted from "./DaysCompleted";
 
 interface Props {
   userData: User;
