@@ -14,7 +14,7 @@ Our goal is that the users of **Quit** should feel motivated to commit to a smok
 **Jonatan Nyberg [github](https://github.com/nybbe123)**
 
 
-[demo]()
+[demo](https://wizardly-lalande-982ec4.netlify.app)
 
 # Getting Started with Create React App
 
